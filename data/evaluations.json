@@ -1,0 +1,3299 @@
+{
+  "metadata": {
+    "generated_at": "2026-08-15T12:00:00Z",
+    "record_count": 75,
+    "synthetic": true,
+    "methodology": "Deterministic demonstration heuristics; not production-grade AI evaluation.",
+    "latency_metrics": {
+      "average_ms": 1994,
+      "p50_ms": 1627,
+      "p95_ms": 4779
+    },
+    "result_thresholds": {
+      "pass": "No major signals; correctness >= 80, retrieval >= 65, groundedness >= 75",
+      "review": "Moderate metric weakness needing investigation",
+      "fail": "Hallucination, low score, poor retrieval, or inappropriate escalation"
+    }
+  },
+  "evaluations": [
+    {
+      "id": "EVAL-001",
+      "timestamp": "2026-07-01T09:00:00Z",
+      "question": "How do I reset my password?",
+      "category": "Account Access",
+      "retrieved_context": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-001-1",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-001-2",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-001-3",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes.",
+      "generated_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 780,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-002",
+      "timestamp": "2026-07-01T15:00:00Z",
+      "question": "Why can't I access my account?",
+      "category": "Account Access",
+      "retrieved_context": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-002-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-002-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-002-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout.",
+      "generated_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 84,
+      "hallucination_detected": false,
+      "latency_ms": 1097,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 94,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-003",
+      "timestamp": "2026-07-01T21:00:00Z",
+      "question": "Can an administrator reset MFA for another user?",
+      "category": "Account Access",
+      "retrieved_context": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-003-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-003-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-003-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An organization administrator can reset a member's MFA after identity verification.",
+      "generated_answer": "An organization administrator can reset a member's MFA after identity verification. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1414,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-004",
+      "timestamp": "2026-07-02T03:00:00Z",
+      "question": "Why was I charged twice this month?",
+      "category": "Billing",
+      "retrieved_context": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-004-1",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-004-2",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-004-3",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days.",
+      "generated_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 94,
+      "hallucination_detected": false,
+      "latency_ms": 1731,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-005",
+      "timestamp": "2026-07-02T05:00:00Z",
+      "question": "How do I update my billing information?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-005-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-005-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-005-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "The account owner can update payment details in Settings > Billing > Payment method.",
+      "generated_answer": "The account owner can update payment details in Settings > Billing > Payment method. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 4274,
+      "escalated": true,
+      "escalation_reason": "Customer Requested Human",
+      "escalation_appropriate": false,
+      "overall_score": 69,
+      "result": "FAIL",
+      "failure_signals": [
+        "Latency exceeded 3.5 second threshold",
+        "Escalation decision was inappropriate"
+      ]
+    },
+    {
+      "id": "EVAL-006",
+      "timestamp": "2026-07-02T11:00:00Z",
+      "question": "Where can I download my invoices?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-006-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-006-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-006-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Invoices are available to the account owner under Settings > Billing > Invoices.",
+      "generated_answer": "Invoices are available to the account owner under Settings > Billing > Invoices. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1015,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-007",
+      "timestamp": "2026-07-02T17:00:00Z",
+      "question": "Why is the desktop app not syncing?",
+      "category": "Technical Support",
+      "retrieved_context": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-007-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-007-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-007-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it.",
+      "generated_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1332,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-008",
+      "timestamp": "2026-07-02T23:00:00Z",
+      "question": "How do I export my workspace data?",
+      "category": "Technical Support",
+      "retrieved_context": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-008-1",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-008-2",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-008-3",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours.",
+      "generated_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 1649,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-009",
+      "timestamp": "2026-07-03T01:00:00Z",
+      "question": "Why am I seeing an upload error?",
+      "category": "Technical Support",
+      "retrieved_context": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-009-1",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-009-2",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        },
+        {
+          "id": "DOC-009-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Check the connection and confirm the file is no larger than 2 GB.",
+      "generated_answer": "You should check your account settings or contact support for assistance.",
+      "correctness_score": 43,
+      "retrieval_score": 9,
+      "recall_at_k": 0.33,
+      "relevant_documents_retrieved": 1,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 82,
+      "hallucination_detected": false,
+      "latency_ms": 3098,
+      "escalated": true,
+      "escalation_reason": "Low Confidence",
+      "escalation_appropriate": true,
+      "overall_score": 46,
+      "result": "FAIL",
+      "failure_signals": [
+        "Poor retrieval: relevant knowledge was not retrieved",
+        "Correctness below threshold"
+      ]
+    },
+    {
+      "id": "EVAL-010",
+      "timestamp": "2026-07-03T07:00:00Z",
+      "question": "Does the platform support SSO?",
+      "category": "Product Information",
+      "retrieved_context": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-010-1",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-010-2",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-010-3",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "SSO is available on Business and Enterprise plans using SAML 2.0.",
+      "generated_answer": "SSO is available on Business and Enterprise plans using SAML 2.0. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 933,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-011",
+      "timestamp": "2026-07-03T13:00:00Z",
+      "question": "Can I use the platform on mobile?",
+      "category": "Product Information",
+      "retrieved_context": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-011-1",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-011-2",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-011-3",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app.",
+      "generated_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 93,
+      "hallucination_detected": false,
+      "latency_ms": 1250,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 87,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-012",
+      "timestamp": "2026-07-03T19:00:00Z",
+      "question": "Do you offer a public API?",
+      "category": "Product Information",
+      "retrieved_context": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-012-1",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-012-2",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-012-3",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings.",
+      "generated_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 95,
+      "hallucination_detected": false,
+      "latency_ms": 1567,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-013",
+      "timestamp": "2026-07-03T21:00:00Z",
+      "question": "Can I cancel my subscription immediately?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-013-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-013-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-013-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated.",
+      "generated_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated. You can check your account settings for the next step. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 78,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 53,
+      "hallucination_detected": true,
+      "latency_ms": 4822,
+      "escalated": true,
+      "escalation_reason": "Sensitive Request",
+      "escalation_appropriate": true,
+      "overall_score": 38,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-014",
+      "timestamp": "2026-07-04T03:00:00Z",
+      "question": "How long does a refund take?",
+      "category": "Subscription",
+      "retrieved_context": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-014-1",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-014-2",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-014-3",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Approved refunds take 5\u201310 business days and return to the original payment method.",
+      "generated_answer": "Approved refunds take 5\u201310 business days and return to the original payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 851,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-015",
+      "timestamp": "2026-07-04T09:00:00Z",
+      "question": "Can I downgrade my subscription?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-015-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-015-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-015-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal.",
+      "generated_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1168,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-016",
+      "timestamp": "2026-07-04T15:00:00Z",
+      "question": "How do I report a security issue?",
+      "category": "Security",
+      "retrieved_context": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-016-1",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-016-2",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-016-3",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Use the security contact form and do not send passwords or access tokens.",
+      "generated_answer": "Use the security contact form and do not send passwords or access tokens. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1485,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-017",
+      "timestamp": "2026-07-04T17:00:00Z",
+      "question": "Can support remove a former employee's access?",
+      "category": "Security",
+      "retrieved_context": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-017-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-017-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-017-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Organization administrators can remove former employees in the admin console.",
+      "generated_answer": "Organization administrators can remove former employees in the admin console. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 88,
+      "hallucination_detected": false,
+      "latency_ms": 1802,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 95,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-018",
+      "timestamp": "2026-07-04T23:00:00Z",
+      "question": "What happens if I suspect unauthorized access?",
+      "category": "Security",
+      "retrieved_context": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-018-1",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-018-2",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-018-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured.",
+      "generated_answer": "You should check your account settings or contact support for assistance. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 45,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 45,
+      "hallucination_detected": true,
+      "latency_ms": 4077,
+      "escalated": true,
+      "escalation_reason": "Policy Restriction",
+      "escalation_appropriate": true,
+      "overall_score": 21,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Correctness below threshold",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-019",
+      "timestamp": "2026-07-05T05:00:00Z",
+      "question": "How do I reset my password?",
+      "category": "Account Access",
+      "retrieved_context": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-019-1",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-019-2",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-019-3",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes.",
+      "generated_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 1086,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-020",
+      "timestamp": "2026-07-05T11:00:00Z",
+      "question": "Why can't I access my account?",
+      "category": "Account Access",
+      "retrieved_context": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-020-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-020-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-020-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout.",
+      "generated_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 84,
+      "hallucination_detected": false,
+      "latency_ms": 1403,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 94,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-021",
+      "timestamp": "2026-07-05T13:00:00Z",
+      "question": "Can an administrator reset MFA for another user?",
+      "category": "Account Access",
+      "retrieved_context": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-021-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-021-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-021-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An organization administrator can reset a member's MFA after identity verification.",
+      "generated_answer": "An organization administrator can reset a member's MFA after identity verification. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1720,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-022",
+      "timestamp": "2026-07-05T19:00:00Z",
+      "question": "Why was I charged twice this month?",
+      "category": "Billing",
+      "retrieved_context": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-022-1",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-022-2",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        },
+        {
+          "id": "DOC-022-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days.",
+      "generated_answer": "A duplicate-looking charge may be pending. You can check your account settings for the next step.",
+      "correctness_score": 70,
+      "retrieval_score": 9,
+      "recall_at_k": 0.33,
+      "relevant_documents_retrieved": 1,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 81,
+      "hallucination_detected": false,
+      "latency_ms": 2901,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 58,
+      "result": "FAIL",
+      "failure_signals": [
+        "Poor retrieval: relevant knowledge was not retrieved"
+      ]
+    },
+    {
+      "id": "EVAL-023",
+      "timestamp": "2026-07-06T01:00:00Z",
+      "question": "How do I update my billing information?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-023-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-023-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-023-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The account owner can update payment details in Settings > Billing > Payment method.",
+      "generated_answer": "The account owner can update payment details in Settings > Billing > Payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1004,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-024",
+      "timestamp": "2026-07-06T07:00:00Z",
+      "question": "Where can I download my invoices?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-024-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-024-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-024-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Invoices are available to the account owner under Settings > Billing > Invoices.",
+      "generated_answer": "Invoices are available to the account owner under Settings > Billing > Invoices. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1321,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-025",
+      "timestamp": "2026-07-06T09:00:00Z",
+      "question": "Why is the desktop app not syncing?",
+      "category": "Technical Support",
+      "retrieved_context": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-025-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-025-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-025-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it.",
+      "generated_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1638,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-026",
+      "timestamp": "2026-07-06T15:00:00Z",
+      "question": "How do I export my workspace data?",
+      "category": "Technical Support",
+      "retrieved_context": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-026-1",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-026-2",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-026-3",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours.",
+      "generated_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 1955,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-027",
+      "timestamp": "2026-07-06T21:00:00Z",
+      "question": "Why am I seeing an upload error?",
+      "category": "Technical Support",
+      "retrieved_context": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-027-1",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-027-2",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-027-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Check the connection and confirm the file is no larger than 2 GB.",
+      "generated_answer": "Check the connection and confirm the file is no larger than 2 GB. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 86,
+      "hallucination_detected": false,
+      "latency_ms": 5056,
+      "escalated": true,
+      "escalation_reason": "Sensitive Request",
+      "escalation_appropriate": false,
+      "overall_score": 68,
+      "result": "FAIL",
+      "failure_signals": [
+        "Latency exceeded 3.5 second threshold",
+        "Escalation decision was inappropriate"
+      ]
+    },
+    {
+      "id": "EVAL-028",
+      "timestamp": "2026-07-07T03:00:00Z",
+      "question": "Does the platform support SSO?",
+      "category": "Product Information",
+      "retrieved_context": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-028-1",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-028-2",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-028-3",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "SSO is available on Business and Enterprise plans using SAML 2.0.",
+      "generated_answer": "SSO is available on Business and Enterprise plans using SAML 2.0. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1239,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-029",
+      "timestamp": "2026-07-07T05:00:00Z",
+      "question": "Can I use the platform on mobile?",
+      "category": "Product Information",
+      "retrieved_context": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-029-1",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-029-2",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-029-3",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app.",
+      "generated_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 93,
+      "hallucination_detected": false,
+      "latency_ms": 1556,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-030",
+      "timestamp": "2026-07-07T11:00:00Z",
+      "question": "Do you offer a public API?",
+      "category": "Product Information",
+      "retrieved_context": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-030-1",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-030-2",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-030-3",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings.",
+      "generated_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 95,
+      "hallucination_detected": false,
+      "latency_ms": 1873,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-031",
+      "timestamp": "2026-07-07T17:00:00Z",
+      "question": "Can I cancel my subscription immediately?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-031-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-031-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-031-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated.",
+      "generated_answer": "You should check your account settings or contact support for assistance.",
+      "correctness_score": 43,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 82,
+      "hallucination_detected": false,
+      "latency_ms": 3880,
+      "escalated": true,
+      "escalation_reason": "Missing Knowledge",
+      "escalation_appropriate": true,
+      "overall_score": 51,
+      "result": "FAIL",
+      "failure_signals": [
+        "Correctness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-032",
+      "timestamp": "2026-07-07T23:00:00Z",
+      "question": "How long does a refund take?",
+      "category": "Subscription",
+      "retrieved_context": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-032-1",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-032-2",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-032-3",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Approved refunds take 5\u201310 business days and return to the original payment method.",
+      "generated_answer": "Approved refunds take 5\u201310 business days and return to the original payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1157,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-033",
+      "timestamp": "2026-07-08T01:00:00Z",
+      "question": "Can I downgrade my subscription?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-033-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-033-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-033-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal.",
+      "generated_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1474,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-034",
+      "timestamp": "2026-07-08T07:00:00Z",
+      "question": "How do I report a security issue?",
+      "category": "Security",
+      "retrieved_context": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-034-1",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-034-2",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-034-3",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Use the security contact form and do not send passwords or access tokens.",
+      "generated_answer": "Use the security contact form and do not send passwords or access tokens. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1791,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-035",
+      "timestamp": "2026-07-08T13:00:00Z",
+      "question": "Can support remove a former employee's access?",
+      "category": "Security",
+      "retrieved_context": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-035-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-035-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-035-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Organization administrators can remove former employees in the admin console.",
+      "generated_answer": "Organization administrators can remove former employees in the admin console. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 88,
+      "hallucination_detected": false,
+      "latency_ms": 2108,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 95,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-036",
+      "timestamp": "2026-07-08T19:00:00Z",
+      "question": "What happens if I suspect unauthorized access?",
+      "category": "Security",
+      "retrieved_context": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-036-1",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-036-2",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        },
+        {
+          "id": "DOC-036-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured.",
+      "generated_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 9,
+      "recall_at_k": 0.33,
+      "relevant_documents_retrieved": 1,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 3135,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 66,
+      "result": "FAIL",
+      "failure_signals": [
+        "Poor retrieval: relevant knowledge was not retrieved"
+      ]
+    },
+    {
+      "id": "EVAL-037",
+      "timestamp": "2026-07-08T21:00:00Z",
+      "question": "How do I reset my password?",
+      "category": "Account Access",
+      "retrieved_context": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-037-1",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-037-2",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-037-3",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes.",
+      "generated_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 1392,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-038",
+      "timestamp": "2026-07-09T03:00:00Z",
+      "question": "Why can't I access my account?",
+      "category": "Account Access",
+      "retrieved_context": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-038-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-038-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-038-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout.",
+      "generated_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 84,
+      "hallucination_detected": false,
+      "latency_ms": 1709,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 94,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-039",
+      "timestamp": "2026-07-09T09:00:00Z",
+      "question": "Can an administrator reset MFA for another user?",
+      "category": "Account Access",
+      "retrieved_context": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-039-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-039-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-039-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An organization administrator can reset a member's MFA after identity verification.",
+      "generated_answer": "An organization administrator can reset a member's MFA after identity verification. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 2026,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-040",
+      "timestamp": "2026-07-09T15:00:00Z",
+      "question": "Why was I charged twice this month?",
+      "category": "Billing",
+      "retrieved_context": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-040-1",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-040-2",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-040-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days.",
+      "generated_answer": "A duplicate-looking charge may be pending. You can check your account settings for the next step. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 71,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 44,
+      "hallucination_detected": true,
+      "latency_ms": 4859,
+      "escalated": true,
+      "escalation_reason": "Customer Requested Human",
+      "escalation_appropriate": true,
+      "overall_score": 32,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-041",
+      "timestamp": "2026-07-09T17:00:00Z",
+      "question": "How do I update my billing information?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-041-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-041-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-041-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The account owner can update payment details in Settings > Billing > Payment method.",
+      "generated_answer": "The account owner can update payment details in Settings > Billing > Payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1310,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-042",
+      "timestamp": "2026-07-09T23:00:00Z",
+      "question": "Where can I download my invoices?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-042-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-042-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-042-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Invoices are available to the account owner under Settings > Billing > Invoices.",
+      "generated_answer": "Invoices are available to the account owner under Settings > Billing > Invoices. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1627,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-043",
+      "timestamp": "2026-07-10T05:00:00Z",
+      "question": "Why is the desktop app not syncing?",
+      "category": "Technical Support",
+      "retrieved_context": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-043-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-043-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-043-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it.",
+      "generated_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1944,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-044",
+      "timestamp": "2026-07-10T11:00:00Z",
+      "question": "How do I export my workspace data?",
+      "category": "Technical Support",
+      "retrieved_context": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-044-1",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-044-2",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-044-3",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours.",
+      "generated_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 911,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-045",
+      "timestamp": "2026-07-10T13:00:00Z",
+      "question": "Why am I seeing an upload error?",
+      "category": "Technical Support",
+      "retrieved_context": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-045-1",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-045-2",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-045-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Check the connection and confirm the file is no larger than 2 GB.",
+      "generated_answer": "You should check your account settings or contact support for assistance. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 44,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 44,
+      "hallucination_detected": true,
+      "latency_ms": 4114,
+      "escalated": true,
+      "escalation_reason": "Missing Knowledge",
+      "escalation_appropriate": true,
+      "overall_score": 20,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Correctness below threshold",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-046",
+      "timestamp": "2026-07-10T19:00:00Z",
+      "question": "Does the platform support SSO?",
+      "category": "Product Information",
+      "retrieved_context": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-046-1",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-046-2",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-046-3",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "SSO is available on Business and Enterprise plans using SAML 2.0.",
+      "generated_answer": "SSO is available on Business and Enterprise plans using SAML 2.0. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1545,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-047",
+      "timestamp": "2026-07-11T01:00:00Z",
+      "question": "Can I use the platform on mobile?",
+      "category": "Product Information",
+      "retrieved_context": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-047-1",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-047-2",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-047-3",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app.",
+      "generated_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 93,
+      "hallucination_detected": false,
+      "latency_ms": 1862,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-048",
+      "timestamp": "2026-07-11T07:00:00Z",
+      "question": "Do you offer a public API?",
+      "category": "Product Information",
+      "retrieved_context": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-048-1",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-048-2",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-048-3",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings.",
+      "generated_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 95,
+      "hallucination_detected": false,
+      "latency_ms": 829,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-049",
+      "timestamp": "2026-07-11T09:00:00Z",
+      "question": "Can I cancel my subscription immediately?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-049-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-049-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-049-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated.",
+      "generated_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1146,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-050",
+      "timestamp": "2026-07-11T15:00:00Z",
+      "question": "How long does a refund take?",
+      "category": "Subscription",
+      "retrieved_context": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-050-1",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-050-2",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-050-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Approved refunds take 5\u201310 business days and return to the original payment method.",
+      "generated_answer": "Approved refunds take 5\u201310 business days and return to the original payment method. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 3369,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 76,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-051",
+      "timestamp": "2026-07-11T21:00:00Z",
+      "question": "Can I downgrade my subscription?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-051-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-051-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-051-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal.",
+      "generated_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1780,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-052",
+      "timestamp": "2026-07-12T03:00:00Z",
+      "question": "How do I report a security issue?",
+      "category": "Security",
+      "retrieved_context": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-052-1",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-052-2",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-052-3",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Use the security contact form and do not send passwords or access tokens.",
+      "generated_answer": "Use the security contact form and do not send passwords or access tokens. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 2097,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-053",
+      "timestamp": "2026-07-12T05:00:00Z",
+      "question": "Can support remove a former employee's access?",
+      "category": "Security",
+      "retrieved_context": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-053-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-053-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-053-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Organization administrators can remove former employees in the admin console.",
+      "generated_answer": "Organization administrators can remove former employees in the admin console. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 88,
+      "hallucination_detected": false,
+      "latency_ms": 1064,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 86,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-054",
+      "timestamp": "2026-07-12T11:00:00Z",
+      "question": "What happens if I suspect unauthorized access?",
+      "category": "Security",
+      "retrieved_context": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-054-1",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-054-2",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-054-3",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured.",
+      "generated_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 1381,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-055",
+      "timestamp": "2026-07-12T17:00:00Z",
+      "question": "How do I reset my password?",
+      "category": "Account Access",
+      "retrieved_context": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-055-1",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-055-2",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        },
+        {
+          "id": "DOC-055-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes.",
+      "generated_answer": "You should check your account settings or contact support for assistance.",
+      "correctness_score": 42,
+      "retrieval_score": 9,
+      "recall_at_k": 0.33,
+      "relevant_documents_retrieved": 1,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 79,
+      "hallucination_detected": false,
+      "latency_ms": 2624,
+      "escalated": true,
+      "escalation_reason": "Sensitive Request",
+      "escalation_appropriate": true,
+      "overall_score": 45,
+      "result": "FAIL",
+      "failure_signals": [
+        "Poor retrieval: relevant knowledge was not retrieved",
+        "Correctness below threshold"
+      ]
+    },
+    {
+      "id": "EVAL-056",
+      "timestamp": "2026-07-12T23:00:00Z",
+      "question": "Why can't I access my account?",
+      "category": "Account Access",
+      "retrieved_context": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-056-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-056-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-056-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout.",
+      "generated_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 84,
+      "hallucination_detected": false,
+      "latency_ms": 2015,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 94,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-057",
+      "timestamp": "2026-07-13T01:00:00Z",
+      "question": "Can an administrator reset MFA for another user?",
+      "category": "Account Access",
+      "retrieved_context": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-057-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-057-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-057-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An organization administrator can reset a member's MFA after identity verification.",
+      "generated_answer": "An organization administrator can reset a member's MFA after identity verification. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 982,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-058",
+      "timestamp": "2026-07-13T07:00:00Z",
+      "question": "Why was I charged twice this month?",
+      "category": "Billing",
+      "retrieved_context": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-058-1",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-058-2",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-058-3",
+          "title": "Relevant support policy",
+          "excerpt": "Duplicate charges can be pending authorizations. If both charges settle after five business days, contact billing with the invoice numbers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days.",
+      "generated_answer": "A duplicate-looking charge may be pending. Contact billing if both charges settle after five business days. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 94,
+      "hallucination_detected": false,
+      "latency_ms": 1299,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-059",
+      "timestamp": "2026-07-13T13:00:00Z",
+      "question": "How do I update my billing information?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-059-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-059-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-059-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can update billing details under Settings, Billing, and Payment method. Changes apply to future invoices.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The account owner can update payment details in Settings > Billing > Payment method.",
+      "generated_answer": "The account owner can update payment details in Settings > Billing > Payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1616,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-060",
+      "timestamp": "2026-07-13T19:00:00Z",
+      "question": "Where can I download my invoices?",
+      "category": "Billing",
+      "retrieved_context": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-060-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-060-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can download invoices from Settings, Billing, and Invoices. Invoices remain available for the account lifetime.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-060-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Invoices are available to the account owner under Settings > Billing > Invoices.",
+      "generated_answer": "Invoices are available to the account owner under Settings > Billing > Invoices. You can check your account settings for the next step. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 78,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 51,
+      "hallucination_detected": true,
+      "latency_ms": 4779,
+      "escalated": true,
+      "escalation_reason": "Policy Restriction",
+      "escalation_appropriate": true,
+      "overall_score": 38,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-061",
+      "timestamp": "2026-07-13T21:00:00Z",
+      "question": "Why is the desktop app not syncing?",
+      "category": "Technical Support",
+      "retrieved_context": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-061-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-061-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-061-3",
+          "title": "Relevant support policy",
+          "excerpt": "Check the status page, confirm the app is online, and restart it. Sync requires app version 4.2 or later.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it.",
+      "generated_answer": "Confirm the app is online and updated to version 4.2 or later, then restart it. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 900,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-062",
+      "timestamp": "2026-07-14T03:00:00Z",
+      "question": "How do I export my workspace data?",
+      "category": "Technical Support",
+      "retrieved_context": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-062-1",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-062-2",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-062-3",
+          "title": "Relevant support policy",
+          "excerpt": "Workspace owners can request an export from Settings, Data controls. The download is prepared within 24 hours.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours.",
+      "generated_answer": "A workspace owner can request an export in Settings > Data controls; it is prepared within 24 hours. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 1217,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 88,
+      "result": "REVIEW",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-063",
+      "timestamp": "2026-07-14T09:00:00Z",
+      "question": "Why am I seeing an upload error?",
+      "category": "Technical Support",
+      "retrieved_context": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-063-1",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-063-2",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-063-3",
+          "title": "Relevant support policy",
+          "excerpt": "Uploads support files up to 2 GB. Check your connection and try a file under the size limit.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Check the connection and confirm the file is no larger than 2 GB.",
+      "generated_answer": "Check the connection and confirm the file is no larger than 2 GB. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 87,
+      "hallucination_detected": false,
+      "latency_ms": 1534,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 95,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-064",
+      "timestamp": "2026-07-14T15:00:00Z",
+      "question": "Does the platform support SSO?",
+      "category": "Product Information",
+      "retrieved_context": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-064-1",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-064-2",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-064-3",
+          "title": "Relevant support policy",
+          "excerpt": "Single sign-on is available on Business and Enterprise plans with SAML 2.0 identity providers.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "SSO is available on Business and Enterprise plans using SAML 2.0.",
+      "generated_answer": "SSO is available on Business and Enterprise plans using SAML 2.0. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 92,
+      "hallucination_detected": false,
+      "latency_ms": 1851,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 97,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-065",
+      "timestamp": "2026-07-14T17:00:00Z",
+      "question": "Can I use the platform on mobile?",
+      "category": "Product Information",
+      "retrieved_context": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-065-1",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-065-2",
+          "title": "Relevant support policy",
+          "excerpt": "The mobile app is available for iOS 16+ and Android 10+. Some administrator settings require the web app.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-065-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "The mobile app supports iOS 16+ and Android 10+, while some admin settings need the web app.",
+      "generated_answer": "You should check your account settings or contact support for assistance. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 43,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 43,
+      "hallucination_detected": true,
+      "latency_ms": 4034,
+      "escalated": true,
+      "escalation_reason": "Low Confidence",
+      "escalation_appropriate": true,
+      "overall_score": 19,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Correctness below threshold",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-066",
+      "timestamp": "2026-07-14T23:00:00Z",
+      "question": "Do you offer a public API?",
+      "category": "Product Information",
+      "retrieved_context": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-066-1",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-066-2",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-066-3",
+          "title": "Relevant support policy",
+          "excerpt": "The REST API is available on Pro, Business, and Enterprise plans. API keys are managed in developer settings.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings.",
+      "generated_answer": "The REST API is offered on Pro and higher plans, with keys managed in developer settings. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 95,
+      "hallucination_detected": false,
+      "latency_ms": 1135,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-067",
+      "timestamp": "2026-07-15T05:00:00Z",
+      "question": "Can I cancel my subscription immediately?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-067-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-067-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-067-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can cancel in Settings, Billing. Paid access continues through the current billing period and is not prorated.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated.",
+      "generated_answer": "Account owners can cancel from Billing; access remains until the billing period ends and refunds are not prorated. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1452,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-068",
+      "timestamp": "2026-07-15T11:00:00Z",
+      "question": "How long does a refund take?",
+      "category": "Subscription",
+      "retrieved_context": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-068-1",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-068-2",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-068-3",
+          "title": "Relevant support policy",
+          "excerpt": "Approved refunds return to the original payment method in 5 to 10 business days. Refund eligibility depends on the purchase terms.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Approved refunds take 5\u201310 business days and return to the original payment method.",
+      "generated_answer": "Approved refunds take 5\u201310 business days and return to the original payment method. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 90,
+      "hallucination_detected": false,
+      "latency_ms": 1769,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-069",
+      "timestamp": "2026-07-15T13:00:00Z",
+      "question": "Can I downgrade my subscription?",
+      "category": "Subscription",
+      "retrieved_context": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-069-1",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-069-2",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-069-3",
+          "title": "Relevant support policy",
+          "excerpt": "Account owners can schedule a downgrade in Billing. The lower plan takes effect at the next renewal date.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal.",
+      "generated_answer": "An account owner can schedule a downgrade, which takes effect on the next renewal. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 2086,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-070",
+      "timestamp": "2026-07-15T19:00:00Z",
+      "question": "How do I report a security issue?",
+      "category": "Security",
+      "retrieved_context": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-070-1",
+          "title": "Relevant support policy",
+          "excerpt": "Report suspected vulnerabilities through the security contact form. Do not include passwords or access tokens in the report.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-070-2",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        },
+        {
+          "id": "DOC-070-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Use the security contact form and do not send passwords or access tokens.",
+      "generated_answer": "Use the security contact form and do not send passwords or access tokens. You can check your account settings for the next step.",
+      "correctness_score": 78,
+      "retrieval_score": 9,
+      "recall_at_k": 0.33,
+      "relevant_documents_retrieved": 1,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 3289,
+      "escalated": true,
+      "escalation_reason": "System Failure",
+      "escalation_appropriate": false,
+      "overall_score": 65,
+      "result": "FAIL",
+      "failure_signals": [
+        "Poor retrieval: relevant knowledge was not retrieved",
+        "Escalation decision was inappropriate"
+      ]
+    },
+    {
+      "id": "EVAL-071",
+      "timestamp": "2026-07-16T01:00:00Z",
+      "question": "Can support remove a former employee's access?",
+      "category": "Security",
+      "retrieved_context": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-071-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-071-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-071-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can remove members in the admin console. Support may verify ownership before helping with account recovery.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Organization administrators can remove former employees in the admin console.",
+      "generated_answer": "Organization administrators can remove former employees in the admin console. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 88,
+      "hallucination_detected": false,
+      "latency_ms": 1370,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 95,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-072",
+      "timestamp": "2026-07-16T07:00:00Z",
+      "question": "What happens if I suspect unauthorized access?",
+      "category": "Security",
+      "retrieved_context": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-072-1",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-072-2",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-072-3",
+          "title": "Relevant support policy",
+          "excerpt": "Change your password, review active sessions, enable MFA, and contact support if you cannot secure the account.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured.",
+      "generated_answer": "Change your password, review sessions, enable MFA, and contact support if the account cannot be secured. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 96,
+      "hallucination_detected": false,
+      "latency_ms": 1687,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 98,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-073",
+      "timestamp": "2026-07-16T09:00:00Z",
+      "question": "How do I reset my password?",
+      "category": "Account Access",
+      "retrieved_context": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-073-1",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-073-2",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-073-3",
+          "title": "Relevant support policy",
+          "excerpt": "Use the Forgot password link on the sign-in page. We send a reset email that expires after 30 minutes.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes.",
+      "generated_answer": "Password reset links are sent from the sign-in page and expire after 30 minutes. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 89,
+      "hallucination_detected": false,
+      "latency_ms": 2004,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    },
+    {
+      "id": "EVAL-074",
+      "timestamp": "2026-07-16T15:00:00Z",
+      "question": "Why can't I access my account?",
+      "category": "Account Access",
+      "retrieved_context": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-074-1",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-074-2",
+          "title": "Relevant support policy",
+          "excerpt": "Check your email and password first. Five failed attempts lock an account for 15 minutes; an administrator can also disable access.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-074-3",
+          "title": "General help article",
+          "excerpt": "General workspace guidance and account navigation information.",
+          "relevant": false
+        }
+      ],
+      "reference_answer": "Account access can fail after five unsuccessful attempts, which causes a 15-minute lockout.",
+      "generated_answer": "You should check your account settings or contact support for assistance. This is guaranteed to be resolved instantly and we automatically waive all related charges.",
+      "correctness_score": 43,
+      "retrieval_score": 57,
+      "recall_at_k": 0.67,
+      "relevant_documents_retrieved": 2,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 42,
+      "hallucination_detected": true,
+      "latency_ms": 5013,
+      "escalated": true,
+      "escalation_reason": "Policy Restriction",
+      "escalation_appropriate": true,
+      "overall_score": 19,
+      "result": "FAIL",
+      "failure_signals": [
+        "Unsupported claim detected in generated answer",
+        "Correctness below threshold",
+        "Groundedness below threshold",
+        "Latency exceeded 3.5 second threshold"
+      ]
+    },
+    {
+      "id": "EVAL-075",
+      "timestamp": "2026-07-16T21:00:00Z",
+      "question": "Can an administrator reset MFA for another user?",
+      "category": "Account Access",
+      "retrieved_context": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+      "retrieved_documents": [
+        {
+          "id": "DOC-075-1",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-075-2",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        },
+        {
+          "id": "DOC-075-3",
+          "title": "Relevant support policy",
+          "excerpt": "Organization administrators can reset a member's MFA after verifying the member identity in the admin console.",
+          "relevant": true
+        }
+      ],
+      "reference_answer": "An organization administrator can reset a member's MFA after identity verification.",
+      "generated_answer": "An organization administrator can reset a member's MFA after identity verification. Please use the relevant setting in your account to complete this.",
+      "correctness_score": 100,
+      "retrieval_score": 96,
+      "recall_at_k": 1.0,
+      "relevant_documents_retrieved": 3,
+      "total_documents_retrieved": 3,
+      "groundedness_score": 91,
+      "hallucination_detected": false,
+      "latency_ms": 1288,
+      "escalated": false,
+      "escalation_reason": "None",
+      "escalation_appropriate": null,
+      "overall_score": 96,
+      "result": "PASS",
+      "failure_signals": []
+    }
+  ]
+}
