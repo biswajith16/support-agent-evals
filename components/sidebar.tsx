@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
-  { href: "/", label: "Overview", icon: BarChart3 },
+  { href: "/dashboard", label: "Overview", icon: BarChart3 },
   { href: "/evaluations", label: "Evaluations", icon: Activity },
   { href: "/failures", label: "Failures", icon: AlertTriangle },
   { href: "/lab", label: "Evaluation Lab", icon: FlaskConical },
@@ -28,7 +28,7 @@ export function Sidebar() {
       <div className="mb-5 px-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">Workspace</div>
       <nav className="space-y-1">
         {navigation.map(({ href, label, icon: Icon }) => {
-          const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+          const active = pathname.startsWith(href);
           return (
             <Link key={href} href={href} className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition ${active ? "bg-sky-300/10 text-sky-200" : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-100"}`}>
               <Icon size={17} strokeWidth={active ? 2.3 : 1.9} />
