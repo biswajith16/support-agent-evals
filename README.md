@@ -12,7 +12,7 @@ This project is a focused proof of work for AI-agent evaluation, RAG evaluation,
 
 ## Demo
 
-Deployment link: _to be added after Vercel deployment_.
+Live demo: [Support Agent Evals](https://support-agent-evals-6hhgvj9i1-biswa-projects1.vercel.app)
 
 ## What It Measures
 
