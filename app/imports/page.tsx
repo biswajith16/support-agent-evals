@@ -39,7 +39,18 @@ export default function ImportsPage() {
     setLoading(false);
   }
 
-  useEffect(() => { void loadWorkspace(); }, []);
+  useEffect(() => {
+    const supabase = getSupabaseBrowserClient();
+    // Magic-link sessions are attached from the URL asynchronously. Listening here prevents
+    // the import screen from showing the signed-out state during that brief handoff.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if ((event === "INITIAL_SESSION" || event === "SIGNED_IN" || event === "TOKEN_REFRESHED") && session?.user) {
+        window.setTimeout(() => { void loadWorkspace(); }, 0);
+      }
+    });
+    void loadWorkspace();
+    return () => subscription.unsubscribe();
+  }, []);
 
   async function handleFile(event: ChangeEvent<HTMLInputElement>) {
     const selected = event.target.files?.[0];
