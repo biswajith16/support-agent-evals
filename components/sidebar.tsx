@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, AlertTriangle, BarChart3, BookOpen, Bot, ChevronRight, FlaskConical } from "lucide-react";
+import { Activity, AlertTriangle, BarChart3, BookOpen, Bot, ChevronRight, FlaskConical, UploadCloud } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,6 +9,7 @@ const navigation = [
   { href: "/evaluations", label: "Evaluations", icon: Activity },
   { href: "/failures", label: "Failures", icon: AlertTriangle },
   { href: "/lab", label: "Evaluation Lab", icon: FlaskConical },
+  { href: "/imports", label: "Import runs", icon: UploadCloud },
   { href: "/about", label: "About", icon: BookOpen },
 ];
 

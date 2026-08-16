@@ -38,6 +38,18 @@ Support Question
   → Analytics + Failure Investigation
 ```
 
+## Private Import Workspace
+
+The `/imports` route is a working, account-scoped workspace for approved synthetic test data. It uses Supabase passwordless email authentication and Row Level Security: users can read and write only their own evaluation runs and records.
+
+- Sign in with an email magic link at `/sign-in`.
+- Import JSON (a dashboard export with `evaluations`, or a plain array) or CSV.
+- CSV requires `generated_answer`; `question`, `category`, `reference_answer`, `retrieved_context`, latency, scores, and result are optional.
+- Missing evaluation fields receive documented deterministic defaults in the browser. This is intentionally transparent, not an LLM judge.
+- The public Supabase URL and publishable key belong in `.env.local`; start from `.env.example`. Never add a service-role key to the frontend.
+
+For a deployed magic-link flow, add the deployed URL plus `/imports` to Supabase Authentication → URL Configuration → Redirect URLs.
+
 ## Evaluation Pipeline
 
 `evaluation/generate_dataset.py` creates 75 deterministic, synthetic support scenarios. For each record it creates retrieved documents, a reference answer, a generated answer, evaluation metrics, a result, and reviewer-friendly failure signals.

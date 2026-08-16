@@ -4,6 +4,7 @@ out/
 *.log
 .DS_Store
 .env*
+!.env.example
 __pycache__/
 *.py[cod]
 .vercel
