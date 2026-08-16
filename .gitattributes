@@ -1,0 +1,2 @@
+# Keep the Python evaluation pipeline visible in GitHub's language statistics.
+evaluation/*.py linguist-detectable=true
